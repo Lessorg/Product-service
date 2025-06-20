@@ -1,11 +1,10 @@
-package test.project.technical_task.config;
+package test.project.technical.task.config;
 
 import com.github.benmanes.caffeine.cache.Caffeine;
-import org.springframework.cache.CacheManager;
-import org.springframework.context.annotation.Bean;
-import org.springframework.cache.caffeine.CaffeineCacheManager;
-
 import java.util.concurrent.TimeUnit;
+import org.springframework.cache.CacheManager;
+import org.springframework.cache.caffeine.CaffeineCacheManager;
+import org.springframework.context.annotation.Bean;
 
 public class CacheConfig {
 

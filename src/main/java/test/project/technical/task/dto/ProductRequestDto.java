@@ -1,4 +1,4 @@
-package test.project.technical_task.dto;
+package test.project.technical.task.dto;
 
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Min;
@@ -17,6 +17,5 @@ public record ProductRequestDto(
         @NotBlank
         String category,
         @Min(0)
-        Integer stock
-        ) {
+        Integer stock) {
 }

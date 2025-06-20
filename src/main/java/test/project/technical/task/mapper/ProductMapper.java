@@ -1,11 +1,14 @@
-package test.project.technical_task.mapper;
-
-import org.mapstruct.*;
-import test.project.technical_task.config.MapperConfig;
-import test.project.technical_task.dto.ProductRequestDto;
-import test.project.technical_task.model.Product;
+package test.project.technical.task.mapper;
 
 import java.time.LocalDateTime;
+import org.mapstruct.AfterMapping;
+import org.mapstruct.BeanMapping;
+import org.mapstruct.Mapper;
+import org.mapstruct.MappingTarget;
+import org.mapstruct.NullValuePropertyMappingStrategy;
+import test.project.technical.task.config.MapperConfig;
+import test.project.technical.task.dto.ProductRequestDto;
+import test.project.technical.task.model.Product;
 
 @Mapper(config = MapperConfig.class)
 public interface ProductMapper {

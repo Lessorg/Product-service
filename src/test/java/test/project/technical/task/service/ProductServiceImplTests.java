@@ -1,31 +1,33 @@
-package test.project.technical_task.service;
+package test.project.technical.task.service;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.any;
+import static org.mockito.Mockito.doAnswer;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
+import jakarta.persistence.EntityNotFoundException;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
-
-import jakarta.persistence.EntityNotFoundException;
-
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import test.project.technical_task.dto.ProductRequestDto;
-import test.project.technical_task.mapper.ProductMapper;
-import test.project.technical_task.model.Product;
-import test.project.technical_task.repository.ProductRepository;
-import test.project.technical_task.service.impl.ProductServiceImpl;
+import test.project.technical.task.dto.ProductRequestDto;
+import test.project.technical.task.mapper.ProductMapper;
+import test.project.technical.task.model.Product;
+import test.project.technical.task.repository.ProductRepository;
+import test.project.technical.task.service.impl.ProductServiceImpl;
 
 @ExtendWith(MockitoExtension.class)
 class ProductServiceImplTests {
@@ -118,11 +120,11 @@ class ProductServiceImplTests {
     @Test
     @DisplayName("Update product when exists updates and returns updated product")
     void updateProduct_ProductExists_UpdatesAndReturnsProduct() {
-        ProductRequestDto productRequestDto = createSampleProductRequestDto();
         Product existingProduct = new Product();
         existingProduct.setId(EXISTING_ID);
         Product updatedProduct = new Product();
         updatedProduct.setId(EXISTING_ID);
+        ProductRequestDto productRequestDto = createSampleProductRequestDto();
 
         when(productRepository.findById(EXISTING_ID)).thenReturn(Optional.of(existingProduct));
         doAnswer(invocation -> {

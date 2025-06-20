@@ -1,4 +1,4 @@
-package test.project.technical_task.model;
+package test.project.technical.task.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

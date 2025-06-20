@@ -1,4 +1,4 @@
-package test.project.technical_task;
+package test.project.technical.task;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

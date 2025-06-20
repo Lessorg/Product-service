@@ -1,4 +1,4 @@
-package test.project.technical_task.config;
+package test.project.technical.task.config;
 
 import org.mapstruct.InjectionStrategy;
 import org.mapstruct.NullValueCheckStrategy;

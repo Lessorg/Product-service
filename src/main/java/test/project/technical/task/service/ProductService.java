@@ -1,10 +1,9 @@
-package test.project.technical_task.service;
-
-import org.springframework.data.domain.Page;
-import test.project.technical_task.dto.ProductRequestDto;
-import test.project.technical_task.model.Product;
+package test.project.technical.task.service;
 
 import java.util.List;
+import org.springframework.data.domain.Page;
+import test.project.technical.task.dto.ProductRequestDto;
+import test.project.technical.task.model.Product;
 
 public interface ProductService {
     Page<Product> getAllProducts(int page, int size);

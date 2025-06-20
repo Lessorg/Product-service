@@ -1,18 +1,17 @@
-package test.project.technical_task.service.impl;
+package test.project.technical.task.service.impl;
 
 import jakarta.persistence.EntityNotFoundException;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import test.project.technical_task.dto.ProductRequestDto;
-import test.project.technical_task.mapper.ProductMapper;
-import test.project.technical_task.model.Product;
-import test.project.technical_task.repository.ProductRepository;
-import test.project.technical_task.service.ProductService;
-
-import java.util.List;
+import test.project.technical.task.dto.ProductRequestDto;
+import test.project.technical.task.mapper.ProductMapper;
+import test.project.technical.task.model.Product;
+import test.project.technical.task.repository.ProductRepository;
+import test.project.technical.task.service.ProductService;
 
 @RequiredArgsConstructor
 @Service
