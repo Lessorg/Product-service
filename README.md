@@ -17,7 +17,7 @@ File -> Settings -> Build, Execution, Deployment -> Compiler -> Annotation Proce
 Maven:
 
 ```bash
-./mvnw spring-boot:run
+mvn spring-boot:run
 ```
 
 ## Архітектура проєкту
